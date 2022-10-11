@@ -1,0 +1,73 @@
+@use './../utilitiesForward' as *;
+
+.timer-show-box {
+    position: initial;
+    z-index: 200;
+    display: none;
+    grid-template-areas: 
+    'watch watch'
+    'pause reset';
+    justify-items: center;
+    column-gap: 2rem;
+
+    @include respondTo(desktop) {
+        margin-top: 5rem;
+        column-gap: 4rem;
+    }
+}
+
+.display-timer-watch {
+    display: grid;
+}
+
+.timer-watch {
+    grid-area: watch;
+    width: 20rem;
+    height: 20rem;
+    background-color: $third-color;
+    border-radius: 50%;
+    @include flex(column, center, center);
+
+    @include respondTo(desktop) {
+        width: 25rem;
+        height: 25rem;
+    }
+}
+
+.timer-watch h1 {
+    width: 18rem;
+    height: 18rem;
+    background-color: $primary-color;
+    border-radius: 50%;
+    font-size: $h1-400;
+    @include flex(column, center, center);
+
+    @include respondTo(desktop) {
+        width: 23rem;
+        height: 23rem;
+        font-size: 4rem;
+    }
+}
+
+.timer-show-box button {
+    width: 9rem;
+    border: none;
+    margin-top: 5rem;
+    font-size: 1.3rem;
+    padding-block: 1rem;
+    cursor: pointer;
+
+    @include respondTo(desktop) {
+        width: 12rem;
+    }
+}
+
+.start-pause-btn {
+    grid-area: pause;
+    background-color: $third-color;
+}
+
+.reset-btn {
+    grid-area: reset;
+    background-color: $font-color;
+}

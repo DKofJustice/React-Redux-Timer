@@ -1,0 +1,98 @@
+@use './../utilitiesForward' as *;
+
+.timer-setup-box {
+    margin-top: 20rem;
+    position: initial;
+    z-index: 200;
+    @include flex(column, center, center);
+}
+
+.hide-timer-setup {
+    display: none;
+}
+
+.timer-setup-box h1 {
+    font-size: $h1-400;
+
+    @include respondTo(desktop) {
+        font-size: $h1-500;
+    }
+}
+
+.timer-setup-box h2 {
+    font-size: $h2-400;
+    margin-top: 6rem;
+
+    @include respondTo(desktop) {
+        font-size: $h2-500;
+    }
+}
+
+.time-inputs-box {
+    margin-top: 4rem;
+    display: grid;
+    grid-template-areas: 
+    "input-1 colon input-2"
+    "text-1 . text-2";
+}
+
+.time-inputs-box input {
+    width: 4.4rem;
+    height: 6rem;
+    background-color: $secondary-color;
+    border: none;
+    color: white;
+    text-align: center;
+    font-size: 1rem;
+
+    @include respondTo(desktop) {
+        font-size: 2rem;
+    }
+}
+
+.time-inputs-box .time-colons {
+    width: 5rem;
+    height: 6rem;
+    font-size: 2rem;
+    @include flex(column, center, center);
+}
+
+.timer-minutes, .timer-seconds {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.timer-minutes {
+    grid-area: text-1;
+}
+
+.timer-seconds {
+    grid-area: text-2;
+}
+
+
+
+.error-message {
+    margin-top: 3rem;
+    color: white;
+}
+
+
+
+
+.start-button {
+    width: 14rem;
+    margin-top: 4rem;
+    padding-block: 0.5rem;
+    background-color: $third-color;
+    border: none;
+    color: white;
+    font-size: $btn;
+    cursor: pointer;
+}
+
+.disable-button {
+    pointer-events: none;
+    cursor: not-allowed;
+    opacity: 0.6;
+}

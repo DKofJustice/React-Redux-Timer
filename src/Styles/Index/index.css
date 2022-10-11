@@ -1,0 +1,248 @@
+@import url("https://fonts.googleapis.com/css2?family=Inder&display=swap"); /*Project primary colors to be used*/
+.timer-setup-box {
+  margin-top: 20rem;
+  position: initial;
+  z-index: 200;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hide-timer-setup {
+  display: none;
+}
+
+.timer-setup-box h1 {
+  font-size: 2.6rem;
+}
+@media (min-width: 1024px) {
+  .timer-setup-box h1 {
+    font-size: 3rem;
+  }
+}
+
+.timer-setup-box h2 {
+  font-size: 1.6rem;
+  margin-top: 6rem;
+}
+@media (min-width: 1024px) {
+  .timer-setup-box h2 {
+    font-size: 1.8rem;
+  }
+}
+
+.time-inputs-box {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-areas: "input-1 colon input-2" "text-1 . text-2";
+}
+
+.time-inputs-box input {
+  width: 4.4rem;
+  height: 6rem;
+  background-color: #363339;
+  border: none;
+  color: white;
+  text-align: center;
+  font-size: 1rem;
+}
+@media (min-width: 1024px) {
+  .time-inputs-box input {
+    font-size: 2rem;
+  }
+}
+
+.time-inputs-box .time-colons {
+  width: 5rem;
+  height: 6rem;
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.timer-minutes, .timer-seconds {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.timer-minutes {
+  grid-area: text-1;
+}
+
+.timer-seconds {
+  grid-area: text-2;
+}
+
+.error-message {
+  margin-top: 3rem;
+  color: white;
+}
+
+.start-button {
+  width: 14rem;
+  margin-top: 4rem;
+  padding-block: 0.5rem;
+  background-color: #65B8E7;
+  border: none;
+  color: white;
+  font-size: 2.3rem;
+  cursor: pointer;
+}
+
+.disable-button {
+  pointer-events: none;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.timer-show-box {
+  position: initial;
+  z-index: 200;
+  display: none;
+  grid-template-areas: "watch watch" "pause reset";
+  justify-items: center;
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
+}
+@media (min-width: 1024px) {
+  .timer-show-box {
+    margin-top: 5rem;
+    -moz-column-gap: 4rem;
+         column-gap: 4rem;
+  }
+}
+
+.display-timer-watch {
+  display: grid;
+}
+
+.timer-watch {
+  grid-area: watch;
+  width: 20rem;
+  height: 20rem;
+  background-color: #65B8E7;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 1024px) {
+  .timer-watch {
+    width: 25rem;
+    height: 25rem;
+  }
+}
+
+.timer-watch h1 {
+  width: 18rem;
+  height: 18rem;
+  background-color: #262428;
+  border-radius: 50%;
+  font-size: 2.6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 1024px) {
+  .timer-watch h1 {
+    width: 23rem;
+    height: 23rem;
+    font-size: 4rem;
+  }
+}
+
+.timer-show-box button {
+  width: 9rem;
+  border: none;
+  margin-top: 5rem;
+  font-size: 1.3rem;
+  padding-block: 1rem;
+  cursor: pointer;
+}
+@media (min-width: 1024px) {
+  .timer-show-box button {
+    width: 12rem;
+  }
+}
+
+.start-pause-btn {
+  grid-area: pause;
+  background-color: #65B8E7;
+}
+
+.reset-btn {
+  grid-area: reset;
+  background-color: #DA6E6E;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  background-color: #262428;
+}
+
+.App {
+  width: 100vw;
+  height: 100vh;
+  font-family: "Inder", sans-serif;
+}
+
+.circle-1 {
+  position: absolute;
+  z-index: 50;
+  border-radius: 50%;
+  width: 382px;
+  height: 382px;
+  left: 269px;
+  top: 111px;
+  background: linear-gradient(144.32deg, rgba(124, 66, 182, 0.07) 30.94%, rgba(174, 148, 201, 0.0105) 93.32%);
+}
+
+.circle-2 {
+  position: absolute;
+  z-index: 50;
+  border-radius: 50%;
+  width: 382px;
+  height: 382px;
+  left: 1243px;
+  top: 29px;
+  background: linear-gradient(144.32deg, rgba(94, 47, 141, 0.07) 30.94%, rgba(205, 56, 56, 0.056) 93.32%);
+}
+
+.bottom-line {
+  position: absolute;
+  z-index: 100;
+  left: 250px;
+  top: 550px;
+}
+
+h1, h2, p, button, input {
+  font-family: "Inder", sans-serif;
+  color: white;
+}
+
+.timer-container {
+  height: 100%;
+  margin-top: -3.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.credits {
+  margin-top: 15rem;
+}/*# sourceMappingURL=index.css.map */

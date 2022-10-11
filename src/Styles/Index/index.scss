@@ -1,0 +1,77 @@
+@use './../utilitiesForward' as *;
+@use './../Component Styles/timerForward' as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    background-color: $primary-color;
+}
+
+.App {
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Inder', sans-serif;
+}
+
+
+
+
+
+
+.circle-1 {
+    position: absolute;
+    z-index: 50;
+    border-radius: 50%;
+    width: 382px;
+    height: 382px;
+    left: 269px;
+    top: 111px;
+    background: linear-gradient(144.32deg, rgba(124, 66, 182, 0.07) 30.94%, rgba(174, 148, 201, 0.0105) 93.32%);
+}
+
+.circle-2 {
+    position: absolute;
+    z-index: 50;
+    border-radius: 50%;
+    width: 382px;
+    height: 382px;
+    left: 1243px;
+    top: 29px;
+    background: linear-gradient(144.32deg, rgba(94, 47, 141, 0.07) 30.94%, rgba(205, 56, 56, 0.056) 93.32%);
+}
+
+.bottom-line {
+    position: absolute;
+    z-index: 100;
+    left: 250px;
+    top: 550px;
+}
+
+
+
+
+h1, h2, p, button, input {
+    font-family: 'Inder', sans-serif;
+    color: white;
+}
+
+
+
+
+.timer-container {
+    height: 100%;
+    margin-top: -3.5rem;
+    @include flex(column, center, center);
+}
+
+.credits {
+    margin-top: 15rem;
+}
