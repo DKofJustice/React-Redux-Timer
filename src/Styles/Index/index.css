@@ -99,6 +99,7 @@
 }
 
 .timer-show-box {
+  margin-top: 20rem;
   position: initial;
   z-index: 200;
   display: none;
